@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site da Escola</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(cyan, white, white, white, white, white,  white, white, white, white);
+            
+        }
+
+        *{
+            scroll-behavior: smooth;
+        }
+
+        #header {
+            background-color: black;        
+            color: white;
+            padding: 10px;
+            box-shadow: 0px 3px 10px rgb(0, 0, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+            z-index: 1;
+
+        }
+        
+      .logo {
+            height: 360px;
+            width: 359px;
+            background: transparent;
+            padding-right: 150px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 24px;
+        }
+
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+
+        }
+        
+        nav ul li {
+            margin: 0 30px;
+           
+        }
+        
+        nav ul li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            border: 2px solid cyan;
+            padding: 9px;
+            margin: 4px;
+            border-radius: 90px;
+            transition: box-shadow 0.4s ease;
+        }
+
+        nav ul li a:hover {
+            box-shadow: 0px 0px 11px cyan, inset 0px 0px 10px cyan;
+        }
+
+        .colegio-imagem {
+            display: block;
+            margin: 0 auto;
+            margin-top: 50px;
+            max-width: 100%;
+            height: auto; 
+        }
+
+       .titulo-historia{
+            font-size: 64px;
+            margin-bottom: 0px;
+            text-align: center;
+            padding-top: 10px;
+            font-family: 'poppins';
+            color: rgb(0, 0, 0);
+
+       }
+
+       .historia{
+            font-family: 'poppins';
+            text-align: center;
+            padding: 49px;
+            font-size: 30px;
+           
+       }
+
+       .titulos{
+            font-size: 69px;
+            text-align: center;
+            font-family: 'poppins';
+            font-weight: 600;
+
+       }
+
+       #refeitorio{
+             background: linear-gradient(to top right, gray, white, white, white, white, gray);
+       }
+
+       .refeitorio{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'poppins';
+            text-align: center;
+            font-size: 35px;
+            padding: 16px;
+       }
+
+       .img-refeitorio{
+            width: 40%;
+            height: 700px;
+            margin: 10px;
+            margin-bottom: 30px;
+       }
+
+       #espacos-naturais{
+            background: linear-gradient(to top right, rgb(67, 211, 0), white, white, white, white, rgb(67, 211, 0));
+       }
+
+       .espacos-naturais{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'poppins';
+            text-align: center;
+            font-size: 35px;
+            padding: 18px;
+            gap: 59px;
+
+       }
+
+       .img-espacos{
+            width: 40%;
+            height: 700px;
+            margin: 10px;
+            margin-bottom: 30px;
+       }
+
+       .img-espacos2{
+            height: 1000px;
+            width: 1880px;
+            margin: 10px;
+       }
+
+       .img-espacos3{
+            width: 40%;
+            height: 700px;
+            margin: 10px;
+            margin-bottom: 30px;
+
+       }
+
+       .lab{
+            width: 97%;
+            height: 97%;
+            margin: 30px;
+       }
+
+       .lab2{
+            width: 47%;
+            height: 690px;
+            margin-bottom: 30px;
+       }
+
+       #laboratorio{
+            background: linear-gradient(to top right, rgb(255, 76, 76), white, white, white, white, rgb(255, 76, 76));
+            margin: 15px;
+       }
+
+       .img-lab{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 59px;
+
+       }
+
+       #sala-ha{
+        background: linear-gradient(to top right, yellow, white, white, white, white, yellow);
+
+       }
+
+       .ha{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'poppins';
+            text-align: center;
+            font-size: 35px;
+            padding: 16px;
+       }
+
+       .img-ha{
+            width: 40%;
+            height: 700px;
+
+       }
+
+       .img-ha2{
+            height: 1000px;
+            width: 1860px;
+            margin-top: 17px;
+            padding: 20px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+       }
+
+       #lab-informatica{
+        background: linear-gradient(to top right, rgb(0, 38, 255), white, white, white, white, rgb(0, 38, 255)); 
+       }
+
+       .inf{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+       }
+
+       .img-inf{
+            width: 97%;
+            height: 97%;
+            margin: 30px;
+
+       }
+
+       #biblioteca{
+        background: linear-gradient(to top right, rgb(255, 153, 0), white, white, white, white, rgb(255, 153, 0)); 
+       }
+
+      .biblioteca{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+       .bibl{
+             width: 37%;
+            height: 700px;
+       }
+
+       .bibl2{
+            width: 37%;
+            height: 700px;
+            margin-left: 40px;
+       }
+
+       .img-bibl2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            margin-bottom: 19px;
+       }
+
+       .rodape{
+            background: rgb(204, 204, 204);
+            text-align: center;
+            padding: 20px;
+            font-size: 19px;
+            font-family: 'poppins';
+}
+
+.botao-voltar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  color: white;
+  background-color: black;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.botao-voltar:hover {
+  transform: translateX(-10px);
+}
+
+.seta-esquerda {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  transform: rotate(-45deg);
+  margin-right: 5px;
+  transition: transform 0.3s ease;
+}
+
+.botao-voltar:hover .seta-esquerda {
+  transform: rotate(-45deg) translateX(-2px);
+}
+
+.botao-topo {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: white;
+    background-color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    z-index: 9999;
+}
+
+.botao-topo:hover {
+    transform: translateY(-10px);
+}
+
+.seta-cima {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(-45deg);
+    margin-right: 5px;
+    transition: transform 0.3s ease;
+}
+
+.botao-topo:hover .seta-cima {
+    transform: rotate(-45deg) translateY(-2px);
+}
+    
+
+</style>
+</head>
+<body>
+        <header id="header">
+            <a href="index.html" class="botao-voltar">
+                <span class="seta-esquerda"></span>
+                VOLTAR
+            </a>
+       <img class="logo" src="logoml.png" alt="logo">
+        <nav>
+            <ul>
+                <li><a href="#refeitorio">Refeitório</a></li>
+                <li><a href="#espacos-naturais">Espaços Naturais</a></li>
+                <li><a href="#laboratorio">Laboratório</a></li>
+                <li><a href="#sala-ha">Sala HA</a></li>
+                <li><a href="#lab-informatica">Lab. Informática</a></li>
+                <li><a href="#biblioteca">Biblioteca</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <h1 class="titulo-historia">História do Colégio</h1>
+<section class="historia">
+       
+        <p>Colégio Estadual Monteiro Lobato está localizado na cidade de Colorado, no estado do Paraná. O colégio tem uma história rica e desempenha um papel importante na educação da região. Ele recebeu o nome de Monteiro Lobato em homenagem ao famoso escritor brasileiro José Bento Monteiro Lobato, conhecido por suas obras literárias direcionadas ao público infantil.<br><br>
+
+            Ao longo dos anos, o Colégio Estadual Monteiro Lobato se consolidou como uma instituição de ensino de qualidade, oferecendo educação em diferentes níveis, desde o ensino fundamental até o ensino médio. A escola sempre buscou promover o aprendizado, o desenvolvimento dos estudantes e a formação de cidadãos conscientes. O colégio tem como objetivo proporcionar um ambiente educacional inclusivo e estimulante, onde os alunos possam desenvolver habilidades acadêmicas, sociais e emocionais. Além das disciplinas curriculares tradicionais, o colégio oferece atividades extracurriculares, como esportes, artes e projetos de pesquisa, que visam enriquecer a experiência educacional dos estudantes.<br><br>
+            
+            Os profissionais que compõem o corpo docente e a equipe de apoio do Colégio Estadual Monteiro Lobato desempenham um papel fundamental no sucesso da instituição. Eles trabalham em estreita colaboração com os alunos, pais e responsáveis, a fim de fornecer um ambiente de aprendizado positivo e estimulante.<br>
+            
+            O Colégio Estadual Monteiro Lobato também busca manter-se atualizado em relação às mudanças educacionais e tecnológicas, incorporando novas metodologias de ensino e recursos tecnológicos em suas práticas pedagógicas.<br>
+            
+            Ao longo de sua história, o colégio tem formado gerações de estudantes, contribuindo para a formação de profissionais qualificados e cidadãos conscientes em Colorado e região.</p> 
+            
+</section>
+
+<section id="refeitorio">
+    <h1 class="titulos">Refeitório</h1>
+<div class="refeitorio">
+    <p>Em nosso refeitório oferecemos refeições equilibradas, preparadas<br> com ingredientes frescos e saudáveis.<br> Opções variadas que atendem a diferentes preferências e restrições alimentares.<br> Priorizamos a qualidade dos alimentos para promover o bem-estar e o rendimento dos estudantes.</p>
+    <img class="img-refeitorio" src="2338.jpg" alt="imagem do refeitório">
+</div>
+</section>
+
+
+
+<section id="espacos-naturais">
+    <h1 class="titulos">Espaços Naturais</h1>
+    <img src="I845.jpg" class="img-espacos2">
+<div class="espacos-naturais"> 
+    <img src="3865.jpg" class="img-espacos">
+    <img src="IMG34.jpg" class="img-espacos3">
+
+</div>
+</section>
+
+<section id="laboratorio">
+    
+    <h1 class="titulos">Laboratório</h1>
+    <img src="I636.jpg" class="lab">
+<div class="img-lab">
+    <img src="I203.jpg" class="lab2">
+    <img src="I417.jpg" class="lab2">
+</div>
+</section>
+<section id="sala-ha">
+    <h1 class="titulos">Sala HA</h1>
+    <div class="ha">
+    <p>Bem-vindo à Sala de Altas Habilidades (HA), onde alunos talentosos em áreas específicas se reúnem para expandir suas habilidades excepcionais.<br> Um ambiente inspirador, professores dedicados e recursos avançados promovem um aprendizado desafiador e personalizado.<br> Aqui, mentes brilhantes prosperam e se preparam para fazer contribuições significativas.</p>
+    <img src="I341.jpg" class="img-ha">
+</div>
+    <img src="I255.jpg" class="img-ha2">
+
+</section>
+<section id="lab-informatica">
+    <h1 class="titulos">Lab. de Informática</h1>  
+<div class="inf">
+    <img src="I630.jpg" class="img-inf">
+    <img src="I721.jpg" class="img-inf">
+</div>
+
+
+</section>
+<section id="biblioteca">
+    <h1 class="titulos">Biblioteca</h1>
+<div class="biblioteca">
+    <img src="I212.jpg" class="bibl">
+    <img src="I147.jpg" class="bibl">
+</div>
+<div class="img-bibl2">
+    <img src="I158.jpg" class="bibl2">
+</div>
+
+</section>
+</main>
+<footer class="rodape">
+    <h4><p>Rua Bahia, 1258 Centro 86.690-000 - Colorado - Pr</p>
+      <p>TELEFONE: (44) 3323-1055</p>
+      <p>FAX: (44) 3323-1012</p>
+      <p>E-MAIL: clomonteirolobato@seed.pr.gov.br</p>
+      </h4>
+    </footer>
+    <a href="#header" class="botao-topo">
+        <span class="seta-cima"></span>
+    </a>
+    <script>window.addEventListener('scroll', function() {
+        var botaoTopo = document.querySelector('.botao-topo');
+        if (window.scrollY > window.innerHeight / 2) {
+            botaoTopo.style.display = 'block';
+        } else {
+            botaoTopo.style.display = 'none';
+        }
+    });
+    
+    document.querySelector('.botao-topo').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    </script>
+</body>
+</html>
+
+
